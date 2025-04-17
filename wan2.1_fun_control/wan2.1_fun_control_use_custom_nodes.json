@@ -544,14 +544,14 @@
         "Node name for S&R": "UNETLoader",
         "models": [
           {
-            "name": "Wan2.1-Fun-1.3B-Control.safetensors",
-            "url": "https://huggingface.co/alibaba-pai/Wan2.1-Fun-1.3B-Control/blob/main/diffusion_pytorch_model.safetensors?download=true",
+            "name": "wan2.1_fun_control_1.3B_bf16.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/diffusion_models/wan2.1_fun_control_1.3B_bf16.safetensors?download=true",
             "directory": "diffusion_models"
           }
         ]
       },
       "widgets_values": [
-        "Wan2.1-Fun-1.3B-Control.safetensors",
+        "wan2.1_fun_control_1.3B_bf16.safetensors",
         "default"
       ],
       "color": "#322",
