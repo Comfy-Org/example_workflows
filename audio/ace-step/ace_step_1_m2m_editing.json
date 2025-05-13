@@ -1,8 +1,8 @@
 {
   "id": "88ac5dad-efd7-40bb-84fe-fbaefdee1fa9",
   "revision": 0,
-  "last_node_id": 50,
-  "last_link_id": 115,
+  "last_node_id": 56,
+  "last_link_id": 119,
   "nodes": [
     {
       "id": 48,
@@ -97,7 +97,7 @@
         58
       ],
       "flags": {},
-      "order": 3,
+      "order": 5,
       "mode": 0,
       "inputs": [
         {
@@ -136,7 +136,7 @@
         26
       ],
       "flags": {},
-      "order": 6,
+      "order": 8,
       "mode": 0,
       "inputs": [
         {
@@ -169,11 +169,11 @@
         657.9622802734375
       ],
       "size": [
-        150.16366577148438,
+        150.87460327148438,
         46
       ],
       "flags": {},
-      "order": 5,
+      "order": 7,
       "mode": 0,
       "inputs": [
         {
@@ -204,6 +204,165 @@
       "widgets_values": []
     },
     {
+      "id": 18,
+      "type": "VAEDecodeAudio",
+      "pos": [
+        1406.169921875,
+        52.43358612060547
+      ],
+      "size": [
+        150.93612670898438,
+        46
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 101
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 83
+        }
+      ],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            116,
+            117,
+            118,
+            119
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.32",
+        "Node name for S&R": "VAEDecodeAudio"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 51,
+      "type": "SaveAudio",
+      "pos": [
+        1599.808837890625,
+        246.18336486816406
+      ],
+      "size": [
+        270,
+        112
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 116
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.34"
+      },
+      "widgets_values": [
+        "audio/ComfyUI"
+      ]
+    },
+    {
+      "id": 53,
+      "type": "PreviewAudio",
+      "pos": [
+        1600.5079345703125,
+        596.70458984375
+      ],
+      "size": [
+        270,
+        88
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 118
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.34",
+        "Node name for S&R": "PreviewAudio"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 52,
+      "type": "SaveAudioOpus",
+      "pos": [
+        1594.4737548828125,
+        411.3661804199219
+      ],
+      "size": [
+        270,
+        136
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 117
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.34",
+        "Node name for S&R": "SaveAudioOpus"
+      },
+      "widgets_values": [
+        "audio/ComfyUI",
+        "128k"
+      ]
+    },
+    {
+      "id": 54,
+      "type": "MarkdownNote",
+      "pos": [
+        1923.333984375,
+        257.1035461425781
+      ],
+      "size": [
+        210,
+        160.2292938232422
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "These nodes can save audio in different formats. Currently, all the modes are Bypass. You can enable them as per your needs.\n\n这些节点可以将 audio  保存成不同格式，目前的模式都是 Bypass ，你可以按你的需要来启用"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
       "id": 3,
       "type": "KSampler",
       "pos": [
@@ -215,7 +374,7 @@
         262
       ],
       "flags": {},
-      "order": 7,
+      "order": 9,
       "mode": 0,
       "inputs": [
         {
@@ -255,70 +414,51 @@
         "Node name for S&R": "KSampler"
       },
       "widgets_values": [
-        247936051715662,
+        803937168622007,
         "randomize",
         50,
         4,
         "res_multistep",
         "simple",
-        0.4000000000000001
+        0.6000000000000001
       ]
     },
     {
-      "id": 18,
-      "type": "VAEDecodeAudio",
+      "id": 56,
+      "type": "MarkdownNote",
       "pos": [
-        1406.169921875,
-        52.43358612060547
+        1064.5172119140625,
+        360.5704345703125
       ],
       "size": [
-        150.93612670898438,
-        46
+        312.7547912597656,
+        301.2734680175781
       ],
       "flags": {},
-      "order": 8,
+      "order": 3,
       "mode": 0,
-      "inputs": [
-        {
-          "name": "samples",
-          "type": "LATENT",
-          "link": 101
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 83
-        }
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "\nUpload an audio clip. Then, you can set the style you want to change in the tags of **TextEncodeAceStepAudio**, and change the gender of the voice, such as \"pop, female voice\" and so on.\n\nIn the **lyrics**, you can modify and edit the original lyrics, thus changing the lyrics in the original audio.\n\n[Important] The **denoise** of the Ksampler node needs to be adjusted. The higher the value, the greater the difference from the original audio. \n\n---\n\n上传一段音频，然后你可以在 **TextEncodeAceStepAudio** 的 tags 里设置想要改变的风格，更换人声的性别比如“pop,female voice” 等\n\n在 **lyrics** 里 你可以将原始的歌词进行修改编辑，从而改变原本音频中的歌词\n\n[重要] Ksampler node 的 **denoise** 需要进行调整，数值越高和原始的音频差异越大"
       ],
-      "outputs": [
-        {
-          "name": "AUDIO",
-          "type": "AUDIO",
-          "links": [
-            26
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.32",
-        "Node name for S&R": "VAEDecodeAudio"
-      },
-      "widgets_values": []
+      "color": "#432",
+      "bgcolor": "#653"
     },
     {
       "id": 49,
       "type": "LoadAudio",
       "pos": [
-        165.9853515625,
-        303.116455078125
+        179.58726501464844,
+        298.2223205566406
       ],
       "size": [
-        390.713623046875,
+        377.0028381347656,
         136
       ],
       "flags": {},
-      "order": 2,
+      "order": 4,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -336,42 +476,12 @@
         "Node name for S&R": "LoadAudio"
       },
       "widgets_values": [
-        "ComfyUI_00024_.flac",
+        "input.mp3",
         null,
         null
       ],
       "color": "#322",
       "bgcolor": "#533"
-    },
-    {
-      "id": 19,
-      "type": "SaveAudio",
-      "pos": [
-        1589.07275390625,
-        56.10503005981445
-      ],
-      "size": [
-        375.57366943359375,
-        112
-      ],
-      "flags": {},
-      "order": 9,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "audio",
-          "type": "AUDIO",
-          "link": 26
-        }
-      ],
-      "outputs": [],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.32"
-      },
-      "widgets_values": [
-        "audio/ComfyUI"
-      ]
     },
     {
       "id": 14,
@@ -385,7 +495,7 @@
         475.584228515625
       ],
       "flags": {},
-      "order": 4,
+      "order": 6,
       "mode": 0,
       "inputs": [
         {
@@ -410,21 +520,45 @@
         "Node name for S&R": "TextEncodeAceStepAudio"
       },
       "widgets_values": [
-        " pop",
-        "[Verse]\nI don't care about the money\n'Cause I exist for me and you\nI live my whole life in this planter\nI can't find my car so just call me the\nHorny gardener\n\n[Verse 2]\nMayflies land on me and tell me they just moved to town\nRemind me of my cousin Dottie she could put five hundred seeds down\nUsed to have a little guy sit beside me but he died in '22\nHmm I think that I was that little guy\nWhoa Tongue slip it wasn't mutual\n\n[Chorus]\nSticky green time in the flowery bob\nMy top shelf's looking good enough to chew\nRight now every fly in the town is talking to me and buzzing too\nDaisy Daisy can you come outside to play or else\nI'll put a garden stake through you\n\n[Verse 3]\nAll the buzzers lockin' up their stems and suckin' up their cuticles\nShe breathes my air I got her light I'm like her cute little cubical\nSome caring soul in my seat might say I'm rotting away it's pitiful\nBut she's the reason I go on and on and every single root'll crawl\n\n[Chorus]\nSticky green time in the flowery bob\nMy top shelf's looking good enough to chew\nRight now every fly in the town is talking to me and buzzing too\nDaisy Daisy can you come outside to play or else\nI'll put a garden stake through you\nOh my pot\nDon't scrape\nOh no\n\n[Verse 4]\nAh hah ahhah ahhah oohhh\nAh ahhahhahhah oh Hah\nOhhh oooh Oooh ohhh\nAh hhah Oh",
+        "anime, cute female vocals, kawaii pop, j-pop, childish, piano, guitar, synthesizer, fast, happy, cheerful, lighthearted,female voice",
+        "[verse]\nNeon lights they glow so bright\nCity whispers in the dead of night\nRhythms course through concrete veins\nCaught in echoes of old refrains\n\n[verse]\nBassline thumping in my chest\nHeartbeats mirror the city's zest\nZapping whispers fill the air\nSynthetic dreams floating everywhere\n\n[chorus]\nCrank it up and let it roll\nEmbrace the heat, let it unfold\nIn this rhythm, we find our home\nHear the night sing, our anthem's shown\n\n[verse]\nGuitar strings begin to moan\nRouse the soul from slumber's throne\nEach note, a tale untold\nIn this night, we're brave and bold\n\n[bridge]\nVoices merge in sweet harmony\nLost in a beautiful symphony\nEternal echoes, timeless sighs\nPassionate cries beneath the skies\n\n[verse]\nKeyboard keys come alive and play\nMelodies carried by the evening spray\nSeize the tune, don't let it go\nIn this instant, we start to soar",
         1.0000000000000002
+      ]
+    },
+    {
+      "id": 55,
+      "type": "SaveAudioMP3",
+      "pos": [
+        1597.8463134765625,
+        54.53912353515625
+      ],
+      "size": [
+        417.9756164550781,
+        136
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 119
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.34",
+        "Node name for S&R": "SaveAudioMP3"
+      },
+      "widgets_values": [
+        "audio/ComfyUI",
+        "V0"
       ]
     }
   ],
   "links": [
-    [
-      26,
-      18,
-      0,
-      19,
-      0,
-      "AUDIO"
-    ],
     [
       80,
       40,
@@ -512,6 +646,38 @@
       3,
       3,
       "LATENT"
+    ],
+    [
+      116,
+      18,
+      0,
+      51,
+      0,
+      "AUDIO"
+    ],
+    [
+      117,
+      18,
+      0,
+      52,
+      0,
+      "AUDIO"
+    ],
+    [
+      118,
+      18,
+      0,
+      53,
+      0,
+      "AUDIO"
+    ],
+    [
+      119,
+      18,
+      0,
+      55,
+      0,
+      "AUDIO"
     ]
   ],
   "groups": [
@@ -527,11 +693,31 @@
       "color": "#3f789e",
       "font_size": 24,
       "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "Audio to be edited",
+      "bounding": [
+        169.58726501464844,
+        224.62237548828125,
+        400.3086242675781,
+        220.6884765625
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
     }
   ],
   "config": {},
   "extra": {
-    "frontendVersion": "1.18.9"
+    "ds": {
+      "scale": 0.9229599817706413,
+      "offset": [
+        -110.41405314130692,
+        155.32622237031106
+      ]
+    },
+    "frontendVersion": "1.19.9"
   },
   "version": 0.4
 }
