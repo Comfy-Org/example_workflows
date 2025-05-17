@@ -1,8 +1,8 @@
 {
   "id": "88ac5dad-efd7-40bb-84fe-fbaefdee1fa9",
   "revision": 0,
-  "last_node_id": 48,
-  "last_link_id": 112,
+  "last_node_id": 52,
+  "last_link_id": 122,
   "nodes": [
     {
       "id": 18,
@@ -16,13 +16,13 @@
         46
       ],
       "flags": {},
-      "order": 7,
+      "order": 9,
       "mode": 0,
       "inputs": [
         {
           "name": "samples",
           "type": "LATENT",
-          "link": 101
+          "link": 122
         },
         {
           "name": "vae",
@@ -40,167 +40,11 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "VAEDecodeAudio",
         "cnr_id": "comfy-core",
-        "ver": "0.3.32",
-        "Node name for S&R": "VAEDecodeAudio"
+        "ver": "0.3.32"
       },
       "widgets_values": []
-    },
-    {
-      "id": 3,
-      "type": "KSampler",
-      "pos": [
-        1040,
-        90
-      ],
-      "size": [
-        315,
-        262
-      ],
-      "flags": {},
-      "order": 6,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 112
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 110
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 109
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 23
-        }
-      ],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "slot_index": 0,
-          "links": [
-            101
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.32",
-        "Node name for S&R": "KSampler"
-      },
-      "widgets_values": [
-        673030539765157,
-        "randomize",
-        50,
-        4,
-        "res_multistep",
-        "simple",
-        1
-      ]
-    },
-    {
-      "id": 40,
-      "type": "CheckpointLoaderSimple",
-      "pos": [
-        179.5068359375,
-        87.76739501953125
-      ],
-      "size": [
-        375,
-        98
-      ],
-      "flags": {},
-      "order": 0,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            111
-          ]
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            80
-          ]
-        },
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [
-            83
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.32",
-        "Node name for S&R": "CheckpointLoaderSimple",
-        "models": [
-          {
-            "name": "ace_step_v1_3.5b.safetensors",
-            "url": "https://huggingface.co/Comfy-Org/ACE-Step_ComfyUI_repackaged/resolve/main/all_in_one/ace_step_v1_3.5b.safetensors?download=true",
-            "directory": "checkpoints"
-          }
-        ]
-      },
-      "widgets_values": [
-        "ace_step_v1_3.5b.safetensors"
-      ],
-      "color": "#322",
-      "bgcolor": "#533"
-    },
-    {
-      "id": 45,
-      "type": "ModelSamplingSD3",
-      "pos": [
-        715.2496948242188,
-        -31.243383407592773
-      ],
-      "size": [
-        270,
-        58
-      ],
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 111
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            112
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.32",
-        "Node name for S&R": "ModelSamplingSD3"
-      },
-      "widgets_values": [
-        4.000000000000001
-      ]
     },
     {
       "id": 48,
@@ -214,7 +58,7 @@
         571.3455200195312
       ],
       "flags": {},
-      "order": 1,
+      "order": 0,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -238,7 +82,7 @@
         112
       ],
       "flags": {},
-      "order": 8,
+      "order": 10,
       "mode": 0,
       "inputs": [
         {
@@ -257,6 +101,130 @@
       ]
     },
     {
+      "id": 40,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        179.5068359375,
+        87.76739501953125
+      ],
+      "size": [
+        375,
+        98
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            115
+          ]
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            80
+          ]
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            83
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.32",
+        "models": [
+          {
+            "name": "ace_step_v1_3.5b.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/ACE-Step_ComfyUI_repackaged/resolve/main/all_in_one/ace_step_v1_3.5b.safetensors?download=true",
+            "directory": "checkpoints"
+          }
+        ]
+      },
+      "widgets_values": [
+        "ace_step_v1_3.5b.safetensors"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 51,
+      "type": "ModelSamplingSD3",
+      "pos": [
+        710,
+        -30
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 115
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            113
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ModelSamplingSD3"
+      },
+      "widgets_values": [
+        5.000000000000001
+      ]
+    },
+    {
+      "id": 50,
+      "type": "LatentOperationTonemapReinhard",
+      "pos": [
+        663.6248168945312,
+        -139.3679962158203
+      ],
+      "size": [
+        314.7124938964844,
+        58
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "LATENT_OPERATION",
+          "type": "LATENT_OPERATION",
+          "links": [
+            114
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LatentOperationTonemapReinhard"
+      },
+      "widgets_values": [
+        1.0000000000000002
+      ]
+    },
+    {
       "id": 14,
       "type": "TextEncodeAceStepAudio",
       "pos": [
@@ -268,7 +236,7 @@
         336.3212890625
       ],
       "flags": {},
-      "order": 4,
+      "order": 5,
       "mode": 0,
       "inputs": [
         {
@@ -283,19 +251,53 @@
           "type": "CONDITIONING",
           "links": [
             108,
-            110
+            117
           ]
         }
       ],
       "properties": {
+        "Node name for S&R": "TextEncodeAceStepAudio",
         "cnr_id": "comfy-core",
-        "ver": "0.3.32",
-        "Node name for S&R": "TextEncodeAceStepAudio"
+        "ver": "0.3.32"
       },
       "widgets_values": [
         "saxphone, jazz\t\n",
         "[instrumental]\n[break down]\n[drum fill]\n[chopped samples]",
         1.0000000000000002
+      ]
+    },
+    {
+      "id": 17,
+      "type": "EmptyAceStepLatentAudio",
+      "pos": [
+        712.6301879882812,
+        566.0068969726562
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            119
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EmptyAceStepLatentAudio",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.32"
+      },
+      "widgets_values": [
+        30,
+        1
       ]
     },
     {
@@ -310,7 +312,7 @@
         26
       ],
       "flags": {},
-      "order": 5,
+      "order": 7,
       "mode": 0,
       "inputs": [
         {
@@ -324,61 +326,118 @@
           "name": "CONDITIONING",
           "type": "CONDITIONING",
           "links": [
-            109
+            120
           ]
         }
       ],
       "properties": {
+        "Node name for S&R": "ConditioningZeroOut",
         "cnr_id": "comfy-core",
-        "ver": "0.3.32",
-        "Node name for S&R": "ConditioningZeroOut"
+        "ver": "0.3.32"
       },
       "widgets_values": []
     },
     {
-      "id": 17,
-      "type": "EmptyAceStepLatentAudio",
+      "id": 49,
+      "type": "LatentApplyOperationCFG",
       "pos": [
-        712.6301879882812,
-        566.0068969726562
+        1038.5880126953125,
+        -17.758432388305664
       ],
       "size": [
-        270,
-        82
+        204.87850952148438,
+        46
       ],
       "flags": {},
-      "order": 2,
+      "order": 6,
       "mode": 0,
-      "inputs": [],
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 113
+        },
+        {
+          "name": "operation",
+          "type": "LATENT_OPERATION",
+          "link": 114
+        }
+      ],
       "outputs": [
         {
-          "name": "LATENT",
-          "type": "LATENT",
+          "name": "MODEL",
+          "type": "MODEL",
           "links": [
-            23
+            121
           ]
         }
       ],
       "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.32",
-        "Node name for S&R": "EmptyAceStepLatentAudio"
+        "Node name for S&R": "LatentApplyOperationCFG"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 52,
+      "type": "KSampler",
+      "pos": [
+        1037.052734375,
+        95.46143341064453
+      ],
+      "size": [
+        315,
+        262
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 121
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 117
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 120
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 119
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            122
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
       },
       "widgets_values": [
-        30,
+        611659002332535,
+        "randomize",
+        50,
+        5,
+        "euler",
+        "simple",
         1
       ]
     }
   ],
   "links": [
-    [
-      23,
-      17,
-      0,
-      3,
-      3,
-      "LATENT"
-    ],
     [
       26,
       18,
@@ -404,14 +463,6 @@
       "VAE"
     ],
     [
-      101,
-      3,
-      0,
-      18,
-      0,
-      "LATENT"
-    ],
-    [
       108,
       14,
       0,
@@ -420,36 +471,68 @@
       "CONDITIONING"
     ],
     [
-      109,
-      44,
+      113,
+      51,
       0,
-      3,
-      2,
-      "CONDITIONING"
+      49,
+      0,
+      "MODEL"
     ],
     [
-      110,
+      114,
+      50,
+      0,
+      49,
+      1,
+      "LATENT_OPERATION"
+    ],
+    [
+      115,
+      40,
+      0,
+      51,
+      0,
+      "MODEL"
+    ],
+    [
+      117,
       14,
       0,
-      3,
+      52,
       1,
       "CONDITIONING"
     ],
     [
-      111,
-      40,
+      119,
+      17,
       0,
-      45,
+      52,
+      3,
+      "LATENT"
+    ],
+    [
+      120,
+      44,
+      0,
+      52,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      121,
+      49,
+      0,
+      52,
       0,
       "MODEL"
     ],
     [
-      112,
-      45,
+      122,
+      52,
       0,
-      3,
+      18,
       0,
-      "MODEL"
+      "LATENT"
     ]
   ],
   "groups": [
@@ -469,7 +552,14 @@
   ],
   "config": {},
   "extra": {
-    "frontendVersion": "1.18.9"
+    "ds": {
+      "scale": 0.8759217573499806,
+      "offset": [
+        -41.59354712459553,
+        295.3144084382071
+      ]
+    },
+    "frontendVersion": "1.19.9"
   },
   "version": 0.4
 }
