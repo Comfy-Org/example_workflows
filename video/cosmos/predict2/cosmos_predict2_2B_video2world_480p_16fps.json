@@ -30,9 +30,9 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "CLIPLoader",
         "cnr_id": "comfy-core",
         "ver": "0.3.40",
+        "Node name for S&R": "CLIPLoader",
         "models": [
           {
             "name": "oldt5_xxl_fp8_e4m3fn_scaled.safetensors",
@@ -75,9 +75,9 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "VAELoader",
         "cnr_id": "comfy-core",
         "ver": "0.3.40",
+        "Node name for S&R": "VAELoader",
         "models": [
           {
             "name": "wan_2.1_vae.safetensors",
@@ -124,9 +124,9 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "CLIPTextEncode",
         "cnr_id": "comfy-core",
-        "ver": "0.3.40"
+        "ver": "0.3.40",
+        "Node name for S&R": "CLIPTextEncode"
       },
       "widgets_values": [
         ""
@@ -181,12 +181,12 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "KSampler",
         "cnr_id": "comfy-core",
-        "ver": "0.3.40"
+        "ver": "0.3.40",
+        "Node name for S&R": "KSampler"
       },
       "widgets_values": [
-        954611886223674,
+        1084135958981475,
         "randomize",
         35,
         4,
@@ -232,9 +232,9 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "VAEDecode",
         "cnr_id": "comfy-core",
-        "ver": "0.3.40"
+        "ver": "0.3.40",
+        "Node name for S&R": "VAEDecode"
       },
       "widgets_values": []
     },
@@ -275,45 +275,12 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "CreateVideo",
         "cnr_id": "comfy-core",
-        "ver": "0.3.40"
+        "ver": "0.3.40",
+        "Node name for S&R": "CreateVideo"
       },
       "widgets_values": [
         16
-      ]
-    },
-    {
-      "id": 38,
-      "type": "SaveVideo",
-      "pos": [
-        1220,
-        260
-      ],
-      "size": [
-        700,
-        690
-      ],
-      "flags": {},
-      "order": 12,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "video",
-          "type": "VIDEO",
-          "link": 52
-        }
-      ],
-      "outputs": [],
-      "properties": {
-        "Node name for S&R": "SaveVideo",
-        "cnr_id": "comfy-core",
-        "ver": "0.3.40"
-      },
-      "widgets_values": [
-        "video/ComfyUI",
-        "auto",
-        "auto"
       ]
     },
     {
@@ -346,138 +313,14 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "LoadImage",
         "cnr_id": "comfy-core",
-        "ver": "0.3.40"
+        "ver": "0.3.40",
+        "Node name for S&R": "LoadImage"
       },
       "widgets_values": [
         "end_image.png",
         "image"
       ]
-    },
-    {
-      "id": 13,
-      "type": "UNETLoader",
-      "pos": [
-        100,
-        180
-      ],
-      "size": [
-        280,
-        82
-      ],
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            33
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "UNETLoader",
-        "cnr_id": "comfy-core",
-        "ver": "0.3.40",
-        "models": [
-          {
-            "name": "cosmos_predict2_2B_t2i.pt",
-            "url": "https://huggingface.co/Comfy-Org/Cosmos_Predict2_repackaged/resolve/main/cosmos_predict2_2B_t2i.pt",
-            "directory": "diffusion_models"
-          }
-        ]
-      },
-      "widgets_values": [
-        "cosmos_predict2_2B_video2world_480p_16fps.pt",
-        "default"
-      ],
-      "color": "#322",
-      "bgcolor": "#533"
-    },
-    {
-      "id": 35,
-      "type": "LoadImage",
-      "pos": [
-        130,
-        630
-      ],
-      "size": [
-        274.080078125,
-        314
-      ],
-      "flags": {},
-      "order": 4,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            50
-          ]
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoadImage",
-        "cnr_id": "comfy-core",
-        "ver": "0.3.40"
-      },
-      "widgets_values": [
-        "Cosmos__00068_.png",
-        "image"
-      ]
-    },
-    {
-      "id": 6,
-      "type": "CLIPTextEncode",
-      "pos": [
-        420,
-        180
-      ],
-      "size": [
-        422.84503173828125,
-        164.31304931640625
-      ],
-      "flags": {},
-      "order": 7,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 35
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "slot_index": 0,
-          "links": [
-            4
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPTextEncode",
-        "cnr_id": "comfy-core",
-        "ver": "0.3.40"
-      },
-      "widgets_values": [
-        "The night of the city, from the perspective of the car's front window, real shooting, real scene, late-night emo style, emotional, sad, neon lights, sense of the future, rain, cinematic feel, cyberpunk\n"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
     },
     {
       "id": 34,
@@ -522,15 +365,172 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "CosmosPredict2ImageToVideoLatent",
         "cnr_id": "comfy-core",
-        "ver": "0.3.40"
+        "ver": "0.3.40",
+        "Node name for S&R": "CosmosPredict2ImageToVideoLatent"
       },
       "widgets_values": [
         848,
         480,
         93,
         1
+      ]
+    },
+    {
+      "id": 6,
+      "type": "CLIPTextEncode",
+      "pos": [
+        420,
+        180
+      ],
+      "size": [
+        422.84503173828125,
+        164.31304931640625
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 35
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            4
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.40",
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "The night of the city, from the perspective of the car's front window, real shooting, real scene, late-night emo style, emotional, sad, neon lights, sense of the future, rain, cinematic feel, cyberpunk\n"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 38,
+      "type": "SaveVideo",
+      "pos": [
+        1220,
+        260
+      ],
+      "size": [
+        700,
+        690
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 52
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.40",
+        "Node name for S&R": "SaveVideo"
+      },
+      "widgets_values": [
+        "video/ComfyUI",
+        "auto",
+        "auto"
+      ]
+    },
+    {
+      "id": 13,
+      "type": "UNETLoader",
+      "pos": [
+        100,
+        180
+      ],
+      "size": [
+        280,
+        82
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            33
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.40",
+        "Node name for S&R": "UNETLoader",
+        "models": [
+          {
+            "name": "cosmos_predict2_2B_video2world_480p_16fps.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/Cosmos_Predict2_repackaged/resolve/main/cosmos_predict2_2B_video2world_480p_16fps.safetensors",
+            "directory": "diffusion_models"
+          }
+        ]
+      },
+      "widgets_values": [
+        "cosmos_predict2_2B_video2world_480p_16fps.safetensors",
+        "default"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 35,
+      "type": "LoadImage",
+      "pos": [
+        130,
+        630
+      ],
+      "size": [
+        274.080078125,
+        314
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            50
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.40",
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "input.png",
+        "image"
       ]
     },
     {
@@ -552,7 +552,7 @@
       "title": "Model links",
       "properties": {},
       "widgets_values": [
-        "**Diffusion model**\n\n[cosmos_predict2_2B_video2world_480p_16fps.pt](https://huggingface.co/Comfy-Org/Cosmos_Predict2_repackaged/resolve/main/cosmos_predict2_2B_video2world_480p_16fps.pt)\n\n**Text encoder**\n\n[oldt5_xxl_fp8_e4m3fn_scaled.safetensors](https://huggingface.co/comfyanonymous/cosmos_1.0_text_encoder_and_VAE_ComfyUI/resolve/main/text_encoders/oldt5_xxl_fp8_e4m3fn_scaled.safetensors)\n\n**VAE**\n\n[wan_2.1_vae.safetensors](https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/vae/wan_2.1_vae.safetensors)\n\n\n```\nComfyUI/\n├── models/\n│   ├── diffusion_models/\n│   │   └─── cosmos_predict2_2B_video2world_480p_16fps.pt\n│   ├── text_encoders/\n│   │   └─── oldt5_xxl_fp8_e4m3fn_scaled.safetensors\n│   └── vae/\n│       └──  wan_2.1_vae.safetensors\n```"
+        "[Tutorial](http://docs.comfy.org/tutorials/video/comos/cosmos-predict2-video2world)｜[教程](http://docs.comfy.org/zh-CN/tutorials/video/comos/cosmos-predict2-video2world)\n\n**Diffusion model**\n\n[cosmos_predict2_2B_video2world_480p_16fps.safetensors](https://huggingface.co/Comfy-Org/Cosmos_Predict2_repackaged/resolve/main/cosmos_predict2_2B_video2world_480p_16fps.safetensors)\n\n**Text encoder**\n\n[oldt5_xxl_fp8_e4m3fn_scaled.safetensors](https://huggingface.co/comfyanonymous/cosmos_1.0_text_encoder_and_VAE_ComfyUI/resolve/main/text_encoders/oldt5_xxl_fp8_e4m3fn_scaled.safetensors)\n\n**VAE**\n\n[wan_2.1_vae.safetensors](https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/vae/wan_2.1_vae.safetensors)\n\n\n```\nComfyUI/\n├── models/\n│   ├── diffusion_models/\n│   │   └─── cosmos_predict2_2B_t2i.pt \n│   ├── text_encoders/\n│   │   └─── oldt5_xxl_fp8_e4m3fn_scaled.safetensors\n│   └── vae/\n│       └──  wan_2.1_vae.safetensors\n```"
       ],
       "color": "#432",
       "bgcolor": "#653"
@@ -708,13 +708,13 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 1.0297198155780363,
+      "scale": 0.5284090828668973,
       "offset": [
-        560.8629751397348,
-        74.56701115124541
+        1006.4800869650588,
+        259.9759282958659
       ]
     },
-    "frontendVersion": "1.22.1",
+    "frontendVersion": "1.21.7",
     "VHS_latentpreview": false,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
