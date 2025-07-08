@@ -1,0 +1,189 @@
+{
+  "id": "ba9df292-1ee9-4b7c-af08-690441990d87",
+  "revision": 0,
+  "last_node_id": 35,
+  "last_link_id": 37,
+  "nodes": [
+    {
+      "id": 33,
+      "type": "MarkdownNote",
+      "pos": [
+        -279.08282470703125,
+        629.91357421875
+      ],
+      "size": [
+        394.96832275390625,
+        297.83856201171875
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "About API Node",
+      "properties": {},
+      "widgets_values": [
+        "## Moonvalley Template Docs\n\n[Moonvalley video generation](http://docs.comfy.org/tutorials/api-nodes/moonvalley/moonvalley-video-generation)\n\n## API Node Docs\n[API Node](https://docs.comfy.org/tutorials/api-nodes/overview)\n## FAQ about login issues\n\nTo use the API, you must be in a secure network environment:\n\n- Allows access from `127.0.0.1` or `localhost`.\n\n- Use our API Node in website services starting with `https`\n\n- Ensure normal connectivity to our API services (VPN may be needed in some regions).\n\n- Make sure you are logged in in the settings and that your account still has enough credits to cover the consumption of API calls.\n\n- On non-whitelisted sites or local area networks (LANs), please try to [log in using an API Key](https://docs.comfy.org/interface/user#logging-in-with-an-api-key)"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 31,
+      "type": "LoadVideo",
+      "pos": [
+        145.56077575683594,
+        637.89208984375
+      ],
+      "size": [
+        572.7887573242188,
+        400.9294738769531
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            35
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadVideo"
+      },
+      "widgets_values": [
+        "ScreenFlow.mp4",
+        "image"
+      ]
+    },
+    {
+      "id": 32,
+      "type": "SaveVideo",
+      "pos": [
+        1170,
+        640
+      ],
+      "size": [
+        654.3008422851562,
+        466.0442199707031
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 37
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveVideo"
+      },
+      "widgets_values": [
+        "video/ComfyUI",
+        "auto",
+        "auto"
+      ]
+    },
+    {
+      "id": 35,
+      "type": "MoonvalleyVideo2VideoNode",
+      "pos": [
+        750,
+        640
+      ],
+      "size": [
+        400,
+        420
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "shape": 7,
+          "type": "VIDEO",
+          "link": 35
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": [
+            37
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MoonvalleyVideo2VideoNode"
+      },
+      "widgets_values": [
+        "A powerful white stallion gallops gracefully across a desolate lunar surface in a stunning black and white shot. As it moves with incredible speed, its luminous mane and tail flow wildly behind it, contrasting sharply with the absolute darkness of space. Its hooves pound silently on the gray, dusty ground, kicking up plumes of fine regolith that catch the light. The camera tracks alongside the magnificent creature, creating a motion blur in the foreground that emphasizes its relentless, majestic pace through the silent, alien landscape. Background: The dark, starless black void of deep space stretches into infinity behind the scene, with distant, barren lunar mountains visible. Middleground: The brilliant white horse is captured mid-stride, its powerful muscles rippling as it runs across a cratered lunar plain. Foreground: The lunar surface is a motion blur of gray dust and rocks, with the shadow of the horse stretching out as it speeds by. ",
+        "<ungraded>, <logo>, ugly hands, mutated hands, mutant, extra fingers, blurry, worst quality, bad, transition, dissolve, cross-dissolve, melt, fade in, fade out, wobbly, weird",
+        "5s",
+        7,
+        2586133731,
+        "randomize",
+        100,
+        "Motion Transfer",
+        100,
+        "Result URL: https://inference-service-prod.s3.amazonaws.com/prompts/prompt_c0c2c2bc-25a5-4cd2-9c68-9b67b9b4ac10/output/output_prompt_c0c2c2bc-25a5-4cd2-9c68-9b67b9b4ac10.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA366ALLS5EVWDGEMN%2F20250706%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250706T135850Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=6c6dfcda864f405771c41d449b3be956d4d751cdaf3e0762b031e705d1509714"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    }
+  ],
+  "links": [
+    [
+      35,
+      31,
+      0,
+      35,
+      0,
+      "VIDEO"
+    ],
+    [
+      37,
+      35,
+      0,
+      32,
+      0,
+      "VIDEO"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 2,
+      "title": "Load reference video, length >= 5s/10s",
+      "bounding": [
+        140,
+        560,
+        592.7887573242188,
+        484.5294494628906
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1.111285193747301,
+      "offset": [
+        63.27319143842749,
+        -414.85812367987694
+      ]
+    },
+    "frontendVersion": "1.24.0-1"
+  },
+  "version": 0.4
+}
